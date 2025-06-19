@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Employee</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Employee</h2>
+      <ul>
+        <li class="menu-item active" data-target="dashboard">Dashboard</li>
+        <li class="menu-item" data-target="menu">Menu Kantin</li>
+        <li class="menu-item" data-target="absen">Recap Absensi</li>        
+        <li class="menu-item" data-target="pengumuman">Pengumuman</li>
+        <li><a href="index.html" style="color:white; text-decoration:none">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <section id="dashboard" class="section active">
+        <div class="card">
+          <h3>Selamat Datang, Elsa Nur Amallia!</h3>
+          <p>Jangan lupa untuk menjaga pola makan demi kesehatanmu!</p>
+        </div>
+      </section>
+
+      <section id="menu" class="section">
+        <div class="card">
+          <h3>Menu Kantin</h3>
+          <table>
+            <thead>
+              <tr><th>Menu</th><th>Kalori</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Nasi /100gram</td><td>130</td></tr>
+              <tr><td>ayam goreng</td><td>200</td></tr>
+              <tr><td>Capcay /50gram</td><td>70</td></tr>
+              <tr><td>Bakso</td><td>50</td></tr>
+              <tr><td>meatball /50gram</td><td>50</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="absen" class="section">
+        <div class="card">
+          <h3>Recap Jadwal Makan Bulan Juli</h3>
+          <table>
+            <thead>
+              <tr><th>Tanggal</th><th>Jam</th><th>RECAP</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>01/07/2025</td><td>11:50</td><td>LUNCH</td></tr>
+              <tr><td>02/07/2025</td><td>12:00</td><td>LUNCH</td></tr>
+              <tr><td>03/07/2025</td><td>-</td><td>NOTHING</td></tr>
+              <tr><td>04/07/2025</td><td>12:30</td><td>LUNCH</td></tr>
+              <tr><td>05/07/2025</td><td>12:00</td><td>LUNCH</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <section id="pengumuman" class="section">
+        <div class="card">
+          <h3>Pengumuman</h3>
+          <ul>
+            <li>Berberapa kalori mungkin sedikit tidak spesifik dikarenakan tidak di ketahui jumlah gram yang di ambil pengonsumsi.</li>
+            <li>Recap akan di reset pada tanggal 25 setiap bulan nya .</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

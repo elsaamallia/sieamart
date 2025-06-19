@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIEAmart</title>
+  <style>
+    body {
+      background-color: #18d4d7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .login-box label, .login-box select, .login-box input {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .login-box input, .login-box select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .login-box button {
+      padding: 10px;
+      width: 100%;
+      background-color: #020011;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background-color: #0d74ce;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <img src="Siemens_AG_logo.svg" alt="Logo siemens" style="max-width: 100px;" />
+    </div>
+
+    <center><h4>Hallo! Kamu Mendatangi Web Kantin Siemens </h4></center>
+    <form id="loginForm">
+      <label for="role">Select:</label>
+      <select id="role" name="role" required>
+        <option value="">-- Select --</option>
+        <option value="employees">Employees</option>
+        <option value="employees">Other</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required />
+
+      <button type="submit">Masuk</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const role = document.getElementById("role").value;
+      if (role === "employees") {
+        window.location.href = "employees.html";
+      } else if (role === "guru") {
+        window.location.href = "guru.html";
+      } else if (role === "admin") {
+        window.location.href = "admin.html";
+      }
+    });
+  </script>
+</body>
+</html>
